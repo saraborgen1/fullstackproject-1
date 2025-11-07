@@ -1,0 +1,26 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.zoo-logo{
+    flex: 0 1 60px;
+    width: 70px;
+    height: auto;
+
+}
+.nav-link{
+    flex: 1 1 auto;
+}
+.search-bar{
+    flex: 1 1 auto;
+    margin-right: 30%; 
+}
+.search-btn{
+    flex: 0 1 40px;
+}
