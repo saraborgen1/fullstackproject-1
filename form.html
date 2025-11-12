@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+</html>
+    <head>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="form.css">
+    </head>
+    <body>  
+        <section class="contact-container">
+            <h2>צור קשר</h2>
+            <p>נשמח לשמוע ממך! מלא את הפרטים ונחזור אליך בהקדם</p>
+            <form method="get">
+                <ul>
+                    <li>
+                        <label for="fullname">שם מלא</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="שם מלא" required>
+                    </li>
+                    <li>
+                        <label for="email">אימייל</label> 
+                        <input type="email" id="email" name="email" placeholder="כתובת אימייל" required>              
+                    </li>
+                    <li>
+                        <label for="phone">טלפון</label>
+                        <input type="tel" id="phone" name="phone" placeholder="טלפון ליצירת קשר" required>                
+                    </li>
+                    <li>
+                        <label for="subject">נושא הפנייה</label>
+                        <input type="text" id="subject" name="subject" placeholder="נושא הפנייה" required>                   
+                    </li>
+                    <li>
+                        <label for="message">הודעה</label>
+                        <textarea id="message" name="message" placeholder="פרטי ההודעה שלך..." required></textarea>
+                    </li>
+                    <li>
+                        <p>סוג הפונה:</p>
+                        <label>
+                        <input type="radio" name="visitor_type" value="new" required>
+                        מבקר חדש
+                        </label>
+                        <br>
+                        <label>
+                        <input type="radio" name="visitor_type" value="returning">
+                        מבקר חוזר
+                        </label>
+                        <br>
+                        <label>
+                        <input type="radio" name="visitor_type" value="staff">
+                        צוות גן החיות
+                        </label>
+                        
+                    </li>
+                    <li>
+                        <button type="submit">שלח</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+    </body>
+    <footer>
+    </footer>
+<html>

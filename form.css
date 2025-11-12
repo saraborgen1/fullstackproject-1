@@ -1,0 +1,10 @@
+body{
+    direction: rtl;
+}
+
+
+form li{    
+    list-style: none;
+    margin-bottom: 20px;
+    margin-right: auto;
+}
