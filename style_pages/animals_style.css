@@ -21,7 +21,9 @@ h1{
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 20px;
-}
+    justify-content: center;
+  }
+
 
 .animal-card img {
   width: 100%;
