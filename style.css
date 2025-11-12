@@ -89,3 +89,79 @@ body {
 .search-btn:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
+
+
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    direction: rtl;
+    text-align: right;
+    grid-template-areas: 
+        "mammals birds reptiles"
+        "mammals fish insects"
+        "mammals amphibians amphibians";
+    grid-auto-flow: dense;
+}
+
+.main-grid > div {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 20px;
+    min-height: 200px;
+    border-radius: 15px;
+
+}
+
+
+.category-mammals{
+    background-image: url("media/images/mammals.jpg");
+    grid-area: mammals;
+}
+.category-birds{
+    background: url("media/images/birds.jpg");
+    grid-area: birds;
+}
+.category-reptiles{
+    background-image: url("media/images/reptiles.jpg");
+    grid-area: reptiles;
+}
+.category-amphibians{
+    background-image: url("media/images/amphibians.jpg");
+    grid-area: amphibians;
+}
+.category-fish{
+    background-image: url("media/images/fish.jpg");
+    grid-area: fish;
+}
+.category-insects{
+    background-image: url("media/images/insects.jpg");
+    grid-area: insects;
+}
+
+@media (max-width: 999px) {
+    .main-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "mammals birds"
+            "mammals reptiles"
+            "fish insects"
+            "amphibians amphibians";
+    }
+}
+
+@media (max-width: 599px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "mammals"
+            "birds"
+            "reptiles"
+            "fish"
+            "insects"
+            "amphibians";
+    }
+}
