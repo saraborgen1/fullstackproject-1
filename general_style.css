@@ -5,3 +5,11 @@ body {
   font-family: "Varela Round", sans-serif;
   direction: rtl; /*hebrew*/
 }
+main{
+    margin-top: 100px;
+}
+@media (max-width:1070px){
+  main{
+      margin-top: 140px;
+  }
+}

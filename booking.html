@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="general_style.css"/>
         <link rel="stylesheet" type="text/css" href="header_footer_style.css"/>
-        <link rel="stylesheet" type="text/css" href="booking.css">
+        <link rel="stylesheet" type="text/css" href="booking_style.css">
         <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
     </head>
@@ -13,14 +13,14 @@
         <header class="main-header">
             <embed class="zoo-logo" src="media/images/Zoo-Logo.png" type="image/png">
             <a class="nav-link" href="index.html">דף הבית</a>
-            <a class="nav-link" href="order.html">הזמנות</a>
+            <a class="nav-link" href="booking.html">הזמנות</a>
             <a class="nav-link" href="about.html">אודות</a>
             <a class="nav-link" href="contact.html">צור קשר</a>
             <input class="search-bar" type="text" class="search-bar" placeholder="חפש באתר">
             <button class="search-btn" type="submit" class="search-btn" aria-label="חפש"></button>
         </header>
         <main>
-            <h2>הזמנות לספארי פארק</h2>
+            <h1>הזמנות לספארי פארק</h1>
             <p>גלו את אחורי הקלעים של גן החיות בסיורים ייחודיים במחלקות הקופים, הפילים,
                 הטורפים ומסע בין אפריקה לאסיה. הכירו מקרוב את הקשר הייחודי
                 בין המטפלים לבעלי החיים, שגרת היום-יום, 
@@ -28,35 +28,79 @@
                 מה אוכלות הפנדות האדומות, האם הדובים באמת ישנים בחורף ועוד!
             </p>
 
-            <h3>ביקור רגיל</h3>
+            <h2>ביקור רגיל</h2>
             <p>
                 סיור עצמאי ברחבי הפארק. ניתן להיכנס ברכב פרטי או ללכת בשבילי הספארי.
                 המסלול כולל צפייה בבעלי חיים בסביבתם הטבעית, עצירות באגמים ובאזורים מוצלים,
                 וחוויה חופשית לכל המשפחה.
             </p>
 
-            <h3> קבוצות וארגונים</h3>
+            <h2> קבוצות וארגונים</h2>
             <p>
                 ביקור מאורגן לקבוצות, מוסדות וארגונים, הכולל כניסה משותפת, הסבר קצר בתחילת הסיור
                 ואפשרות לסיור ברכבת הספארי. נדרש תיאום מראש. מתאים לקבוצות של 10 מבקרים ומעלה.
             </p>
 
-            <h3> ימי הולדת</h3>
+            <h2> ימי הולדת</h2>
             <p>
                 חבילה מיוחדת לילדים הכוללת סיור קצר עם מדריך, ביקור בפינת הליטוף,
                 פעילות יצירה או האכלה מודרכת, ואזור מסודר לחגיגה משפחתית.
                 ניתן לשלב קייטרינג קל או פיקניק משפחתי במתחם ייעודי.
             </p>
 
-            <h3> סיור מודרך / חוויות מיוחדות</h3>
+            <h2> סיור מודרך / חוויות מיוחדות</h2>
             <p>
                 סיור עומק חווייתי עם מדריך מקצועי הכולל עצירות מאחורי הקלעים, האכלת בעלי חיים,
                 הסברים מרתקים על שגרת הטיפול והמחקר, ומפגש אישי עם המטפלים.
                 יש להירשם מראש – מקומות מוגבלים.
             </p>
             
-            <h3>טבלת מחירים</h3>
-            <table border="1" cellpadding="8">
+            <h2>טבלת מחירים</h2>
+            <h2>טבלת מחירים</h2>
+            <div class="table-wrap">
+            <table class="price-table">
+                <thead>
+                <tr>
+                    <th>סוג סיור</th>
+                    <th>ילד (3–12)</th>
+                    <th>מבוגר (13+)</th>
+                    <th>גמלאי / חייל / סטודנט</th>
+                    <th>פעוט (עד גיל 3)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>ביקור רגיל</td>
+                    <td><span class="price-badge">45 ₪</span></td>
+                    <td><span class="price-badge">65 ₪</span></td>
+                    <td><span class="price-badge">50 ₪</span></td>
+                    <td><span class="price-badge">חינם</span></td>
+                </tr>
+                <tr>
+                    <td>קבוצות וארגונים</td>
+                    <td><span class="price-badge">40 ₪</span></td>
+                    <td><span class="price-badge">55 ₪</span></td>
+                    <td><span class="price-badge">45 ₪</span></td>
+                    <td><span class="price-badge">חינם</span></td>
+                </tr>
+                <tr>
+                    <td>ימי הולדת</td>
+                    <td><span class="price-badge">50 ₪</span></td>
+                    <td>—</td>
+                    <td>—</td>
+                    <td><span class="price-badge">חינם</span></td>
+                </tr>
+                <tr>
+                    <td>סיור מודרך / חוויות מיוחדות</td>
+                    <td><span class="price-badge">60 ₪</span></td>
+                    <td><span class="price-badge">75 ₪</span></td>
+                    <td><span class="price-badge">60 ₪</span></td>
+                    <td><span class="price-badge">חינם</span></td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+
                 <thead>
                 <tr>
                     <th>סוג סיור</th>
@@ -104,12 +148,11 @@
                 - המחירים כוללים ביטוח, הדרכה בסיסית וכניסה לכל מתחמי הפארק.
             </p>
 
-            <h3>מפת הגעה לספארי פארק</h3>
-            <iframe
+            <h2>מפת הגעה לספארי פארק</h2>
+            <iframe class="iframe-map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.744813132396!2d34.7548353!3d31.7308773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502b7a1d4bde05b%3A0x75cb032d08342d29!2z15nXkdeo15XXqCDXqteU15XXnCDXp9eZ16DXmdeU15ogMzEsINeX15LXldeV15vXnCDXkNeZ15zXl9ec15cg15TXmdeQ15Ug15jXqNeV15nXmden15c!5e0!3m2!1siw!2sil!4v1731439875001!5m2!1siw!2sil"
                 width="600"
                 height="450"
-                style="border:0;"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">

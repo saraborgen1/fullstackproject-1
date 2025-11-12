@@ -25,6 +25,7 @@ body {
 }
 
 .main-header {
+  min-width: 430px;
   position: fixed;      
   top: 0;
   right: 0;
