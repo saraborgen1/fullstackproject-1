@@ -17,13 +17,6 @@ body {
   margin-top: auto; /* חשוב */
 }
 
-.top-img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  display: block;
-}
-
 .main-header {
   min-width: 430px;
   position: fixed;      
