@@ -25,7 +25,8 @@ main{
     margin-right: 1%;
 }
 
-.main-grid div {
+
+.main-grid a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,7 +34,7 @@ main{
     padding: 20px;
     min-height: 200px;
     border-radius: 15px;
-
+    text-decoration: none;
 }
 
 
