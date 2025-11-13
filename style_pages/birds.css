@@ -1,0 +1,116 @@
+/* --- סגנון לציפור הצפה ולנגן הקטן --- */
+
+/* הסתרה נגישה */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* מיקום הציפור הקבוע במסך */
+.floating-bird {
+  --bird-top: clamp(120px, 24vh, 300px);
+  position: fixed;
+  top: var(--bird-top);
+  inset-inline-end: 24px; /* תומך ב-RTL/LTR */
+  z-index: 1000;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+/* הכפתור (label של ה-checkbox) */
+.bird-btn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  line-height: 0;
+  border-radius: 999px;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,.18));
+  transition: transform .25s ease;
+}
+
+.bird-img {
+  width: 86px;
+  display: block;
+  user-select: none;
+}
+
+/* תנועה קלה בהובר ולחיצה */
+.bird-btn:hover {
+  transform: translateY(-4px) rotate(-4deg);
+}
+.bird-btn:active {
+  transform: translateY(-8px) scale(1.03) rotate(-6deg);
+}
+
+/* אנימציית "מעוף" כאשר ה-checkbox מסומן */
+@keyframes bird-takeoff {
+  0%   { transform: translateY(0) rotate(0); opacity: 1; }
+  25%  { transform: translateY(-14px) rotate(-8deg); }
+  50%  { transform: translateY(-28px) rotate(8deg); }
+  75%  { transform: translateY(-40px) rotate(-4deg); opacity: .92; }
+  100% { transform: translateY(-52px) scale(1.06) rotate(-2deg); opacity: .9; }
+}
+
+#birdToggle:checked + .bird-btn .bird-img {
+  animation: bird-takeoff 1.1s ease both;
+}
+
+/* גם לחיצה רגילה תיתן "קפיצה" קלה */
+@keyframes bird-pop {
+  0%   { transform: translateY(0) rotate(0); }
+  100% { transform: translateY(-10px) rotate(-6deg); }
+}
+.bird-btn:active .bird-img {
+  animation: bird-pop .18s ease;
+}
+
+/* נגן קטן שמופיע רק בהובר */
+.no-js-sound .bird-audio {
+  width: 180px;
+  height: 28px;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity .2s ease, transform .2s ease;
+  pointer-events: none;
+  accent-color: #165A49;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.12));
+}
+
+.no-js-sound:hover .bird-audio,
+.no-js-sound:focus-within .bird-audio {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* התאמות למסכים קטנים */
+@media (max-width: 520px) {
+  .bird-img { width: 70px; }
+  .floating-bird { inset-inline-end: 16px; }
+  .no-js-sound .bird-audio { width: 160px; }
+}
+
+/* הפחתת תנועה לפי העדפת מערכת */
+@media (prefers-reduced-motion: reduce) {
+  .bird-btn,
+  .bird-btn:hover,
+  .bird-btn:active {
+    transition: none;
+    transform: none;
+  }
+  .bird-btn .bird-img {
+    animation: none !important;
+  }
+  .no-js-sound .bird-audio {
+    transition: none;
+  }
+}
