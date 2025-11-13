@@ -17,3 +17,7 @@
   margin-bottom: 20px;
   max-width: 1000px;
 }
+
+.about-box .highlight {
+  font-weight: bold;
+}
