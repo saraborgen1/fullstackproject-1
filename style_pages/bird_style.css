@@ -35,7 +35,7 @@
 }
 
 .bird-button:focus .bird-icon{
-  animation: bird-fly 1.4s ease-out;
+  animation: bird-fly 1.5s ease-out;
 }
 
 .bird-audio {
