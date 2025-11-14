@@ -22,7 +22,7 @@
         <main class="contact-container">
             <h2>צור קשר</h2>
             <p>נשמח לשמוע ממך! מלא את הפרטים ונחזור אליך בהקדם</p>
-            <form method="get">
+            <form method="get" action="#">
                 <ul>
                     <li>
                         <label for="fullname">שם מלא</label>
@@ -38,29 +38,28 @@
                     </li>
                     <li>
                         <label for="subject">נושא הפנייה</label>
-                        <input type="text" id="subject" name="subject" placeholder="נושא הפנייה" required>                   
+                        <input type="text" id="subject" name="subject" placeholder="נושא הפנייה">                   
                     </li>
                     <li>
                         <label for="message">הודעה</label>
-                        <textarea id="message" name="message" placeholder="פרטי ההודעה שלך..." required></textarea>
+                        <textarea id="message" name="message" placeholder="פרטי ההודעה שלך..."></textarea>
                     </li>
                     <li>
                         <p>סוג הפונה:</p>
                         <label>
-                        <input type="radio" name="visitor_type" value="new" required>
-                        מבקר חדש
+                            <input type="radio" name="visitor_type" value="new">
+                            מבקר חדש
                         </label>
                         <br>
                         <label>
-                        <input type="radio" name="visitor_type" value="returning">
-                        מבקר חוזר
+                            <input type="radio" name="visitor_type" value="returning">
+                            מבקר חוזר
                         </label>
                         <br>
                         <label>
-                        <input type="radio" name="visitor_type" value="staff">
-                        צוות גן החיות
-                        </label>
-                        
+                            <input type="radio" name="visitor_type" value="staff">
+                            צוות גן החיות
+                        </label>  
                     </li>
                     <li>
                         <button type="submit">שלח</button>

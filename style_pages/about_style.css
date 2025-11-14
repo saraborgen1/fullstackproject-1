@@ -1,9 +1,8 @@
 .about-box {
   line-height: 1.9;
   color: #222;
-  margin-right: 10%;
   margin-bottom: 60px;
-  margin-left: 10%;
+  margin-inline: 10%;
 }
 
 .about-box h1 {
